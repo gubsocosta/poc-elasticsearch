@@ -1,0 +1,15 @@
+---
+## Default Elasticsearch configuration from Elasticsearch base image.
+## https://github.com/elastic/elasticsearch/blob/main/distribution/docker/src/docker/config/elasticsearch.yml
+#
+cluster.name: ${CLUSTER_NAME}
+node.name: es01
+discovery.type: ${DISCOVERY_TYPE}
+network.host: 0.0.0.0
+bootstrap.memory_lock: true
+
+xpack.license.self_generated.type: ${LICENSE} # Set to 'basic' or 'trial' to automatically start the 30-day trial
+xpack.security.enabled: false # Disable Xpack security because it requires transport SSL to be enabled, too
+xpack.security.enrollment.enabled: false
+xpack.security.http.ssl.enabled: false
+xpack.security.transport.ssl.enabled: false
