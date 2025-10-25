@@ -21,6 +21,7 @@ services:
     volumes:
       - $PWD/elasticsearch/data:/usr/share/elasticsearch/data:Z
       - $PWD/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,Z
+      - $PWD/elasticsearch/config/init-elasticsearch.sh:/docker-entrypoint-initdb.d/init-elasticsearch.sh
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
     mem_limit: ${ES_MEM_LIMIT}
