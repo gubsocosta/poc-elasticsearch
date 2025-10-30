@@ -9,6 +9,7 @@ RUN apt update && \
     apt list --upgradable -a && \
     apt install -y \
     curl \
+    jq \
     net-tools \
     unzip \
     vim \
